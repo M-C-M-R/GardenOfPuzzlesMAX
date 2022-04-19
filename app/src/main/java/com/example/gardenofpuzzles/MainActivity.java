@@ -10,15 +10,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     //buttons
-    Button upButt;
-    Button downButt;
-    Button leftButt;
-    Button rightBut;
+    ImageButton upButt;
+    ImageButton downButt;
+    ImageButton leftButt;
+    ImageButton rightBut;
     Button puzzButton;
     // views
     ImageView farmer;
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         leftButt = findViewById(R.id.leftButton);
         rightBut = findViewById(R.id.rightButton);
         puzzButton = findViewById(R.id.puzButton);
+        puzzButton.setText("Check Stats");
         // set views
         position = findViewById(R.id.location);
         farmer = findViewById(R.id.farmerImage);
@@ -67,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
                         AnimatorSet animatiorSet2 = new AnimatorSet();
                         animatiorSet2.playTogether( animatorY2);
                         animatiorSet2.start();
+                        puzzButton.setText("Check Stats");
                         break;
                     case 3:
                         positionNum = 1;
@@ -74,6 +77,8 @@ public class MainActivity extends AppCompatActivity {
                         AnimatorSet animatiorSet3 = new AnimatorSet();
                         animatiorSet3.playTogether( animatorY3);
                         animatiorSet3.start();
+                        puzzButton.setText("Chess Question");
+                        puzzButton.setVisibility(View.VISIBLE);
                         break;
                     case 4:
                         positionNum = 3;
@@ -89,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
                         AnimatorSet animatiorSet5 = new AnimatorSet();
                         animatiorSet5.playTogether( animatorY5);
                         animatiorSet5.start();
+                        puzzButton.setText("Fill Cup Problem");
                         break;
                     case 6:
                         positionNum = 4;
@@ -96,6 +102,7 @@ public class MainActivity extends AppCompatActivity {
                         AnimatorSet animatiorSet6 = new AnimatorSet();
                         animatiorSet6.playTogether( animatorY6);
                         animatiorSet6.start();
+                        puzzButton.setVisibility(View.GONE);
                         break;
                     case 7:
                         positionNum = 6;
@@ -103,6 +110,8 @@ public class MainActivity extends AppCompatActivity {
                         AnimatorSet animatiorSet7 = new AnimatorSet();
                         animatiorSet7.playTogether( animatorY7);
                         animatiorSet7.start();
+                        puzzButton.setText("Syllogism Question");
+                        puzzButton.setVisibility(View.VISIBLE);
                         break;
                     case 8:
                         positionNum = 5;
@@ -110,6 +119,7 @@ public class MainActivity extends AppCompatActivity {
                         AnimatorSet animatiorSet8 = new AnimatorSet();
                         animatiorSet8.playTogether(animatorY8);
                         animatiorSet8.start();
+                        puzzButton.setText("River Crossing Problem");
                         break;
                 }
                 position.setText(String.valueOf(positionNum));
@@ -128,6 +138,7 @@ public class MainActivity extends AppCompatActivity {
                         AnimatorSet animatiorSet1 = new AnimatorSet();
                         animatiorSet1.playTogether(animatorY1);
                         animatiorSet1.start();
+                        puzzButton.setText("Fill Cup Problem");
                         break;
                     case 1:
                         positionNum = 3;
@@ -135,6 +146,7 @@ public class MainActivity extends AppCompatActivity {
                         AnimatorSet animatiorSet5 = new AnimatorSet();
                         animatiorSet5.playTogether( animatorY5);
                         animatiorSet5.start();
+                        puzzButton.setVisibility(View.GONE);
                         break;
                     case 2:
                         positionNum = 5;
@@ -142,6 +154,7 @@ public class MainActivity extends AppCompatActivity {
                         AnimatorSet animatiorSet2 = new AnimatorSet();
                         animatiorSet2.playTogether( animatorY2);
                         animatiorSet2.start();
+                        puzzButton.setText("River Crossing Problem");
                         break;
                     case 3:
                         positionNum = 4;
@@ -156,6 +169,8 @@ public class MainActivity extends AppCompatActivity {
                         AnimatorSet animatiorSet6 = new AnimatorSet();
                         animatiorSet6.playTogether( animatorY6);
                         animatiorSet6.start();
+                        puzzButton.setText("Syllogism Question");
+                        puzzButton.setVisibility(View.VISIBLE);
                         break;
                     case 5:
                         positionNum = 8;
@@ -163,6 +178,7 @@ public class MainActivity extends AppCompatActivity {
                         AnimatorSet animatiorSet3 = new AnimatorSet();
                         animatiorSet3.playTogether( animatorY3);
                         animatiorSet3.start();
+                        puzzButton.setText("Truth Tellers and Liars Puzzle");
                         break;
                     case 6:
                         positionNum = 7;
@@ -170,6 +186,7 @@ public class MainActivity extends AppCompatActivity {
                         AnimatorSet animatiorSet7 = new AnimatorSet();
                         animatiorSet7.playTogether( animatorY7);
                         animatiorSet7.start();
+                        puzzButton.setVisibility(View.GONE);
                         break;
                     case 7:
                         positionNum = 7;
@@ -192,6 +209,8 @@ public class MainActivity extends AppCompatActivity {
                         AnimatorSet animatiorSet1 = new AnimatorSet();
                         animatiorSet1.playTogether(animatorX1);
                         animatiorSet1.start();
+                        puzzButton.setText("Check Stats");
+                        puzzButton.setVisibility(View.VISIBLE);
                         break;
                     case 2:
                         break;
@@ -202,6 +221,8 @@ public class MainActivity extends AppCompatActivity {
                         AnimatorSet animatiorSet2 = new AnimatorSet();
                         animatiorSet2.playTogether(animatorX2);
                         animatiorSet2.start();
+                        puzzButton.setText("Fill Cup Problem");
+                        puzzButton.setVisibility(View.VISIBLE);
                         break;
                     case 4:
                         positionNum = 5;
@@ -210,6 +231,8 @@ public class MainActivity extends AppCompatActivity {
                         AnimatorSet animatiorSet3 = new AnimatorSet();
                         animatiorSet3.playTogether(animatorX3);
                         animatiorSet3.start();
+                        puzzButton.setText("River Crossing Problem");
+                        puzzButton.setVisibility(View.VISIBLE);
                         break;
                     case 5:
                         break;
@@ -222,6 +245,8 @@ public class MainActivity extends AppCompatActivity {
                         AnimatorSet animatiorSet4 = new AnimatorSet();
                         animatiorSet4.playTogether(animatorX4);
                         animatiorSet4.start();
+                        puzzButton.setText("Truth Tellers and Liars Puzzle");
+                        puzzButton.setVisibility(View.VISIBLE);
                         break;
                     case 8:
                         break;
@@ -241,6 +266,8 @@ public class MainActivity extends AppCompatActivity {
                         AnimatorSet animatiorSet1 = new AnimatorSet();
                         animatiorSet1.playTogether(animatorX1);
                         animatiorSet1.start();
+                        puzzButton.setText("Chess Question");
+                        puzzButton.setVisibility(View.VISIBLE);
                         break;
                     case 1:
                         break;
@@ -251,6 +278,7 @@ public class MainActivity extends AppCompatActivity {
                         AnimatorSet animatiorSet2 = new AnimatorSet();
                         animatiorSet2.playTogether(animatorX2);
                         animatiorSet2.start();
+                        puzzButton.setVisibility(View.GONE);
                         break;
                     case 3:
                         break;
@@ -263,6 +291,7 @@ public class MainActivity extends AppCompatActivity {
                         AnimatorSet animatiorSet3 = new AnimatorSet();
                         animatiorSet3.playTogether(animatorX3);
                         animatiorSet3.start();
+                        puzzButton.setVisibility(View.GONE);
                         break;
                     case 6:
                         break;
@@ -275,6 +304,7 @@ public class MainActivity extends AppCompatActivity {
                         AnimatorSet animatiorSet4 = new AnimatorSet();
                         animatiorSet4.playTogether(animatorX4);
                         animatiorSet4.start();
+                        puzzButton.setVisibility(View.GONE);
                         break;
                 }
                 position.setText(String.valueOf(positionNum));
@@ -286,8 +316,34 @@ public class MainActivity extends AppCompatActivity {
         puzzButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent intent = new Intent(getApplicationContext(),PuzzleOptionsScreen.class);
-                startActivity(intent);
+                //based on what location we are at, that determines the puzzle code
+                int puzCode=0;
+                switch (positionNum){
+                    case 1:
+                        puzCode=1;
+                        break;
+                    case 2:
+                        puzCode=2;
+                        break;
+                    case 5:
+                        puzCode=3;
+                        break;
+                    case 6:
+                        puzCode=4;
+                        break;
+                    case 8:
+                        puzCode=5;
+                        break;
+                    default:
+                        break;
+                }
+                //if we are on a puzzle plot, open the puzzle screen
+                if (puzCode!=0){
+                    Intent intent = new Intent(getApplicationContext(),PuzzleOptionsScreen.class);
+                    //pass puzzle code so that we can display it properly
+                    intent.putExtra("PUZCODE",puzCode);
+                    startActivity(intent);
+                }
             }
         });
     }
